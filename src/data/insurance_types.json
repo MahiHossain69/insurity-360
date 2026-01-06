@@ -1,0 +1,2737 @@
+[
+  {
+    "insuranceType": "Personal Auto Insurance",
+    "schema": {
+      "primaryInsured": {
+        "fields": [
+          { "key": "firstName", "label": "First Name", "type": "text" },
+          { "key": "middleName", "label": "Middle Name", "type": "text" },
+          { "key": "lastName", "label": "Last Name", "type": "text" },
+          { "key": "dateOfBirth", "label": "Date of Birth", "type": "date" },
+          {
+            "key": "driversLicenseNumber",
+            "label": "Driver's License Number",
+            "type": "text"
+          },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "married", "label": "Married", "type": "radio" },
+          {
+            "key": "defensiveDrivingCertificate",
+            "label": "Defensive Driving Certificate",
+            "type": "radio"
+          },
+          {
+            "key": "defensiveDrivingClassDate",
+            "label": "Date of Class",
+            "type": "date"
+          },
+          { "key": "priorCoverage", "label": "Prior Coverage", "type": "radio" }
+        ]
+      },
+      "additionalDrivers": {
+        "repeatable": true,
+        "fields": [
+          { "key": "firstName", "label": "First Name", "type": "text" },
+          { "key": "middleName", "label": "Middle Name", "type": "text" },
+          { "key": "lastName", "label": "Last Name", "type": "text" },
+          { "key": "dateOfBirth", "label": "Date of Birth", "type": "date" },
+          {
+            "key": "driversLicenseNumber",
+            "label": "Driver's License Number",
+            "type": "text"
+          },
+          { "key": "state", "label": "State", "type": "select" },
+          {
+            "key": "relationshipToInsured",
+            "label": "Relationship to Insured",
+            "type": "select"
+          },
+          {
+            "key": "accidentsInLast5Years",
+            "label": "Accidents in the Last 5 Years?",
+            "type": "radio"
+          },
+          {
+            "key": "defensiveDrivingCertificate",
+            "label": "Defensive Driving Certificate",
+            "type": "radio"
+          },
+          {
+            "key": "defensiveDrivingClassDate",
+            "label": "Date of Class",
+            "type": "date"
+          }
+        ]
+      },
+      "vehicles": {
+        "repeatable": true,
+        "fields": [
+          { "key": "yearMake", "label": "Year Make", "type": "select" },
+          { "key": "model", "label": "Model", "type": "select" },
+          { "key": "trim", "label": "Trim", "type": "text" },
+          { "key": "currentMiles", "label": "Current Miles", "type": "number" },
+          { "key": "vin", "label": "VIN", "type": "text" },
+          { "key": "primaryUse", "label": "Primary Use", "type": "select" },
+          {
+            "key": "annualMileage",
+            "label": "Annual Mileage",
+            "type": "number"
+          },
+          {
+            "key": "garagingAddress",
+            "label": "Garaging Address",
+            "type": "textarea"
+          },
+          { "key": "ownership", "label": "Ownership", "type": "select" },
+          { "key": "name", "label": "Name", "type": "text" }
+        ],
+        "address": {
+          "fields": [
+            {
+              "key": "streetAddress",
+              "label": "Street Address",
+              "type": "text"
+            },
+            { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+            { "key": "city", "label": "City", "type": "text" },
+            { "key": "state", "label": "State", "type": "select" },
+            { "key": "zipCode", "label": "Zip Code", "type": "text" }
+          ]
+        }
+      },
+      "insuranceDetails": {
+        "fields": [
+          {
+            "key": "priorInsuranceCarrierName",
+            "label": "Prior Insurance Carrier Name",
+            "type": "text"
+          },
+          { "key": "startDate", "label": "Start Date", "type": "date" },
+          { "key": "endDate", "label": "End Date", "type": "date" },
+          {
+            "key": "notesOnCurrentCoverage",
+            "label": "Notes on Current Coverage",
+            "type": "textarea"
+          },
+          {
+            "key": "coverageSelection",
+            "label": "Coverage Selection",
+            "type": "select"
+          },
+          {
+            "key": "drivingHistoryNotes",
+            "label": "Driving History Notes",
+            "type": "textarea"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "insuranceType": "Homeowners Insurance",
+    "schema": {
+      "insured": {
+        "fields": [
+          { "key": "nameInsured", "label": "Name Insured", "type": "text" },
+          { "key": "ownedBy", "label": "Owned By", "type": "text" },
+          { "key": "firstName", "label": "First Name", "type": "text" },
+          { "key": "middleName", "label": "Middle Name", "type": "text" },
+          { "key": "lastName", "label": "Last Name", "type": "text" }
+        ]
+      },
+      "propertyAddress": {
+        "fields": [
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" }
+        ]
+      },
+      "mailingAddress": {
+        "fields": [
+          {
+            "key": "autoFillFromProperty",
+            "label": "Auto Fill",
+            "type": "checkbox"
+          },
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" }
+        ]
+      },
+      "propertyDetails": {
+        "fields": [
+          { "key": "yearBuilt", "label": "Year Built", "type": "select" },
+          {
+            "key": "squareFootage",
+            "label": "Square Footage",
+            "type": "number"
+          },
+          { "key": "homeStyle", "label": "Home Style", "type": "text" },
+          { "key": "stories", "label": "Number of Stories", "type": "number" }
+        ]
+      },
+      "garage": {
+        "fields": [
+          {
+            "key": "numberOfCars",
+            "label": "Number of Cars",
+            "type": "number"
+          },
+          { "key": "type", "label": "Type", "type": "select" },
+          {
+            "key": "squareFootage",
+            "label": "Garage Square Footage",
+            "type": "number"
+          }
+        ]
+      },
+      "systemUpdates": {
+        "fields": [
+          {
+            "key": "roofAgeYear",
+            "label": "Roof Age (Year Last Installed)",
+            "type": "number"
+          },
+          { "key": "roofDesign", "label": "Roof Design", "type": "select" },
+          {
+            "key": "plumbingLastUpdated",
+            "label": "Plumbing Last Updated",
+            "type": "date"
+          },
+          {
+            "key": "electricalLastUpdated",
+            "label": "Electrical Last Updated",
+            "type": "date"
+          },
+          {
+            "key": "heatingLastUpdated",
+            "label": "Heating Last Updated",
+            "type": "date"
+          },
+          { "key": "homeType", "label": "Home Type", "type": "select" },
+          {
+            "key": "foundationType",
+            "label": "Foundation Type",
+            "type": "select"
+          },
+          {
+            "key": "miscRenovations",
+            "label": "Misc. Renovations",
+            "type": "textarea"
+          }
+        ]
+      },
+      "exteriorSafety": {
+        "fields": [
+          { "key": "pool", "label": "Pool", "type": "radio" },
+          { "key": "poolType", "label": "Pool Type", "type": "select" },
+          { "key": "poolHasSlide", "label": "Has Slide", "type": "radio" },
+          {
+            "key": "poolHasDivingBoard",
+            "label": "Has Diving Board",
+            "type": "radio"
+          },
+          { "key": "trampoline", "label": "Trampoline", "type": "radio" },
+          {
+            "key": "flooringTypesPercent",
+            "label": "Flooring Types (by %)",
+            "type": "select"
+          },
+          { "key": "floodZone", "label": "Flood Zone", "type": "radio" },
+          { "key": "porchSqFt", "label": "Porch", "type": "number" },
+          { "key": "deckSqFt", "label": "Deck", "type": "number" },
+          { "key": "patioSqFt", "label": "Patio", "type": "number" },
+          { "key": "sunroomSqFt", "label": "Sunroom", "type": "number" }
+        ]
+      },
+      "floridaFields": {
+        "fields": [
+          { "key": "roofCover", "label": "Roof Cover", "type": "select" },
+          {
+            "key": "roofToWallConnection",
+            "label": "Roof-to-Wall Connection",
+            "type": "select"
+          },
+          {
+            "key": "roofDeckAttachmentType",
+            "label": "Roof Deck Attachment Type",
+            "type": "select"
+          },
+          {
+            "key": "fourPointInspection",
+            "label": "4-Point Inspection",
+            "type": "radio"
+          },
+          {
+            "key": "windMitigationReport",
+            "label": "Wind Mitigation Report",
+            "type": "radio"
+          }
+        ]
+      },
+      "otherDetails": {
+        "fields": [
+          {
+            "key": "securitySystemInstalled",
+            "label": "Security System Installed",
+            "type": "radio"
+          },
+          { "key": "pets", "label": "Any Pets", "type": "select" },
+          { "key": "petBreed", "label": "Pet Breed", "type": "text" },
+          {
+            "key": "jewelryAddedToPolicy",
+            "label": "Jewelry Added to Policy",
+            "type": "text"
+          },
+          {
+            "key": "priorClaimsHistory",
+            "label": "Prior Claims History",
+            "type": "textarea"
+          },
+          {
+            "key": "currentCarrierExpiration",
+            "label": "Current Carrier & Expiration",
+            "type": "text"
+          },
+          {
+            "key": "carrierNotes",
+            "label": "Carrier Notes/Prior Coverage Notes",
+            "type": "textarea"
+          }
+        ]
+      },
+      "mortgageLender": {
+        "fields": [
+          { "key": "name", "label": "Name", "type": "text" },
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" },
+          { "key": "loanNumber", "label": "Loan Number", "type": "text" }
+        ]
+      }
+    }
+  },
+  {
+    "insuranceType": "Umbrella Insurance Policy",
+    "schema": {
+      "insured": {
+        "fields": [
+          { "key": "firstName", "label": "First Name", "type": "text" },
+          { "key": "middleName", "label": "Middle Name", "type": "text" },
+          { "key": "lastName", "label": "Last Name", "type": "text" },
+          { "key": "dateOfBirth", "label": "Date of Birth", "type": "date" }
+        ]
+      },
+      "address": {
+        "fields": [
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" }
+        ]
+      },
+      "contact": {
+        "fields": [
+          { "key": "phoneNumber", "label": "Phone Number", "type": "text" },
+          { "key": "emailAddress", "label": "Email Address", "type": "text" }
+        ]
+      },
+      "coveredPolicies": {
+        "label": "Current Primary Policies that need to be covered by umbrella  (select all that apply)",
+        "fields": [
+          { "key": "coverAuto", "label": "Auto", "type": "checkbox" },
+          {
+            "key": "coverHomeowners",
+            "label": "Homeowners",
+            "type": "checkbox"
+          },
+          {
+            "key": "coverWatercraft",
+            "label": "Watercraft",
+            "type": "checkbox"
+          },
+          { "key": "coverRV", "label": "RV", "type": "checkbox" },
+          {
+            "key": "coverMotorcycle",
+            "label": "Motorcycle",
+            "type": "checkbox"
+          },
+          { "key": "coverOther", "label": "Other", "type": "checkbox" }
+        ]
+      },
+      "policyLimits": {
+        "fields": [
+          {
+            "key": "policyLimitAmount",
+            "label": "Policy Limit Amount",
+            "type": "select"
+          },
+          {
+            "key": "desiredUmbrellaCoverageLimit",
+            "label": "Desired Umbrella Coverage Limit (Amount)",
+            "type": "number"
+          },
+          {
+            "key": "underlyingPolicyDeductibles",
+            "label": "Underlying Policy Deductibles",
+            "type": "textarea"
+          }
+        ]
+      },
+      "priorClaimsHistory": {
+        "fields": [
+          {
+            "key": "hasPriorClaims",
+            "label": "Prior Claims History",
+            "type": "radio"
+          },
+          {
+            "key": "priorClaimsDetails",
+            "label": "Details",
+            "type": "textarea"
+          }
+        ]
+      },
+      "additionalInsureds": {
+        "repeatable": true,
+        "fields": [
+          { "key": "fullName", "label": "Full Name", "type": "text" },
+          { "key": "relationship", "label": "Relationship", "type": "select" },
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" },
+          { "key": "phoneNumber", "label": "Phone Number", "type": "text" },
+          { "key": "emailAddress", "label": "Email Address", "type": "text" }
+        ]
+      },
+      "policyUse": {
+        "fields": [
+          { "key": "useBusiness", "label": "Business", "type": "radio" },
+          { "key": "usePersonal", "label": "Personal", "type": "radio" },
+          { "key": "useBoth", "label": "Both", "type": "radio" }
+        ]
+      },
+      "businessDetails": {
+        "fields": [
+          { "key": "businessType", "label": "Business Type", "type": "select" }
+        ]
+      },
+      "riskManagement": {
+        "fields": [
+          {
+            "key": "riskManagementMeasures",
+            "label": "Risk Management Measures in place",
+            "type": "textarea"
+          }
+        ]
+      },
+      "brokerAgentContact": {
+        "fields": [
+          { "key": "name", "label": "Name", "type": "text" },
+          { "key": "phone", "label": "Phone", "type": "text" },
+          { "key": "email", "label": "Email", "type": "text" }
+        ]
+      },
+      "additionalNotes": {
+        "fields": [
+          { "key": "notes", "label": "Additional Notes", "type": "textarea" }
+        ]
+      }
+    }
+  },
+  {
+    "insuranceType": "Health Insurance",
+    "schema": {
+      "insured": {
+        "fields": [
+          { "key": "firstName", "label": "First Name", "type": "text" },
+          { "key": "middleName", "label": "Middle Name", "type": "text" },
+          { "key": "lastName", "label": "Last Name", "type": "text" },
+          { "key": "dateOfBirth", "label": "Date of Birth", "type": "date" },
+          { "key": "ssn", "label": "SSN (optional)", "type": "text" }
+        ]
+      },
+      "address": {
+        "fields": [
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" },
+          { "key": "phoneNumber", "label": "Phone Number", "type": "text" },
+          { "key": "emailAddress", "label": "Email Address", "type": "text" }
+        ]
+      },
+      "demographics": {
+        "fields": [
+          { "key": "gender", "label": "Gender", "type": "select" },
+          { "key": "tobaccoUse", "label": "Tobacco Use", "type": "radio" }
+        ]
+      },
+      "measurements": {
+        "fields": [
+          { "key": "height", "label": "Height", "type": "number" },
+          { "key": "heightUnit", "label": "Height Unit", "type": "select" },
+          { "key": "weight", "label": "Weight", "type": "number" },
+          { "key": "weightUnit", "label": "Weight Unit", "type": "select" }
+        ]
+      },
+      "currentInsurance": {
+        "fields": [
+          {
+            "key": "hasCurrentInsurance",
+            "label": "Current Insurance (Y/N)",
+            "type": "radio"
+          },
+          { "key": "carrier", "label": "Carrier", "type": "text" },
+          { "key": "expiration", "label": "Expiration", "type": "date" }
+        ]
+      },
+      "medical": {
+        "fields": [
+          {
+            "key": "preExistingConditions",
+            "label": "Pre-Existing Conditions",
+            "type": "textarea"
+          },
+          {
+            "key": "numberOfDependents",
+            "label": "Number of Dependents",
+            "type": "number"
+          },
+          {
+            "key": "annualIncomeEstimate",
+            "label": "Annual Income Estimate",
+            "type": "number"
+          }
+        ]
+      },
+      "householdMembers": {
+        "repeatable": true,
+        "fields": [
+          { "key": "name", "label": "Name", "type": "text" },
+          { "key": "relation", "label": "Relation", "type": "select" }
+        ]
+      }
+    }
+  },
+  {
+    "insuranceType": "Life Insurance",
+    "schema": {
+      "insured": {
+        "fields": [
+          { "key": "firstName", "label": "First Name", "type": "text" },
+          { "key": "middleName", "label": "Middle Name", "type": "text" },
+          { "key": "lastName", "label": "Last Name", "type": "text" },
+          { "key": "dateOfBirth", "label": "Date of Birth", "type": "date" },
+          { "key": "gender", "label": "Gender", "type": "select" },
+          { "key": "ssn", "label": "SSN (optional)", "type": "text" }
+        ]
+      },
+      "address": {
+        "fields": [
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" },
+          { "key": "phoneNumber", "label": "Phone Number", "type": "text" },
+          { "key": "emailAddress", "label": "Email Address", "type": "text" }
+        ]
+      },
+      "measurements": {
+        "fields": [
+          { "key": "height", "label": "Height", "type": "number" },
+          { "key": "heightUnit", "label": "Height Unit", "type": "select" },
+          { "key": "weight", "label": "Weight", "type": "number" },
+          { "key": "weightUnit", "label": "Weight Unit", "type": "select" }
+        ]
+      },
+      "tobaccoNicotine": {
+        "fields": [
+          {
+            "key": "usesTobacco",
+            "label": "Tobacco/Nicotine Use",
+            "type": "radio"
+          },
+          { "key": "tobaccoType", "label": "Type", "type": "select" },
+          {
+            "key": "tobaccoLastConsumed",
+            "label": "Last Consumed",
+            "type": "date"
+          }
+        ]
+      },
+      "alcoholConsumption": {
+        "fields": [
+          {
+            "key": "consumesAlcohol",
+            "label": "Alcohol Consumption",
+            "type": "radio"
+          },
+          { "key": "alcoholType", "label": "Type", "type": "select" },
+          {
+            "key": "alcoholLastConsumed",
+            "label": "Last Consumed",
+            "type": "date"
+          }
+        ]
+      },
+      "healthHistory": {
+        "fields": [
+          {
+            "key": "healthConditionsMedications",
+            "label": "Health Conditions / Medications",
+            "type": "textarea"
+          },
+          {
+            "key": "priorSurgeries",
+            "label": "Prior Surgeries",
+            "type": "textarea"
+          }
+        ]
+      },
+      "financial": {
+        "fields": [
+          { "key": "occupation", "label": "Occupation", "type": "select" },
+          {
+            "key": "annualEarnedIncome",
+            "label": "Annual Earned Income",
+            "type": "number"
+          },
+          { "key": "netWorth", "label": "Net Worth", "type": "number" },
+          {
+            "key": "desiredCoverageAmount",
+            "label": "Desired Coverage Amount",
+            "type": "number"
+          },
+          { "key": "policyType", "label": "Policy Type", "type": "select" },
+          {
+            "key": "ownedByTrustOrEstate",
+            "label": "Owned by Trust or Estate",
+            "type": "text"
+          }
+        ]
+      },
+      "beneficiaries": {
+        "repeatable": true,
+        "fields": [
+          { "key": "name", "label": "Name", "type": "text" },
+          { "key": "dateOfBirth", "label": "Date of Birth", "type": "date" },
+          { "key": "relation", "label": "Relation", "type": "select" }
+        ]
+      }
+    }
+  },
+  {
+    "insuranceType": "Recreational Vehicle (RV) Insurance",
+    "schema": {
+      "insured": {
+        "fields": [
+          { "key": "firstName", "label": "First Name", "type": "text" },
+          { "key": "middleName", "label": "Middle Name", "type": "text" },
+          { "key": "lastName", "label": "Last Name", "type": "text" },
+          { "key": "dateOfBirth", "label": "Date of Birth", "type": "date" }
+        ]
+      },
+      "driversLicense": {
+        "fields": [
+          { "key": "class", "label": "Class", "type": "select" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "licenseNumber", "label": "License Number", "type": "text" }
+        ]
+      },
+      "rvDetails": {
+        "fields": [
+          { "key": "rvType", "label": "RV Type", "type": "select" },
+          { "key": "year", "label": "Year", "type": "select" },
+          { "key": "make", "label": "Make", "type": "text" },
+          { "key": "model", "label": "Model", "type": "text" },
+          { "key": "vin", "label": "VIN", "type": "text" },
+          { "key": "usage", "label": "Usage", "type": "select" },
+          {
+            "key": "daysUsedPerYear",
+            "label": "Days Used per Year",
+            "type": "number"
+          },
+          {
+            "key": "storageLocation",
+            "label": "Storage Location",
+            "type": "textarea"
+          },
+          { "key": "lengthFeet", "label": "RV Length", "type": "number" }
+        ]
+      },
+      "towingVehicleInfo": {
+        "fields": [
+          {
+            "key": "hasTowingVehicle",
+            "label": "Towing Vehicle Info",
+            "type": "checkbox"
+          }
+        ]
+      },
+      "coverage": {
+        "fields": [
+          { "key": "coverageType", "label": "Coverage Type", "type": "select" }
+        ]
+      },
+      "drivingHistory": {
+        "fields": [
+          {
+            "key": "historyNotes",
+            "label": "Driving History",
+            "type": "textarea"
+          }
+        ]
+      },
+      "currentCoverageDetails": {
+        "fields": [
+          {
+            "key": "details",
+            "label": "Current Coverage Details",
+            "type": "textarea"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "insuranceType": "Motorcycle Insurance",
+    "schema": {
+      "insured": {
+        "fields": [
+          { "key": "firstName", "label": "First Name", "type": "text" },
+          { "key": "middleName", "label": "Middle Name", "type": "text" },
+          { "key": "lastName", "label": "Last Name", "type": "text" },
+          { "key": "dateOfBirth", "label": "Date of Birth", "type": "date" }
+        ]
+      },
+      "driversLicense": {
+        "fields": [
+          { "key": "licenseNumber", "label": "Number", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" }
+        ]
+      },
+      "motorcycleDetails": {
+        "fields": [
+          {
+            "key": "motorcycleType",
+            "label": "Motorcycle Type",
+            "type": "select"
+          },
+          { "key": "year", "label": "Year", "type": "select" },
+          { "key": "make", "label": "Make", "type": "text" },
+          { "key": "model", "label": "Model", "type": "text" },
+          { "key": "vin", "label": "VIN", "type": "text" },
+          { "key": "engineCC", "label": "Engine CC/Size", "type": "number" },
+          {
+            "key": "annualMileage",
+            "label": "Annual Mileage",
+            "type": "number"
+          },
+          { "key": "ownership", "label": "Ownership", "type": "select" },
+          {
+            "key": "garagingAddress",
+            "label": "Garaging Address",
+            "type": "textarea"
+          },
+          {
+            "key": "safetyFeatures",
+            "label": "Safety Features",
+            "type": "textarea"
+          }
+        ]
+      },
+      "safetyCourse": {
+        "fields": [
+          {
+            "key": "completed",
+            "label": "Motorcycle Safety Course Completed?",
+            "type": "radio"
+          },
+          { "key": "completionDate", "label": "Date", "type": "date" }
+        ]
+      },
+      "priorClaimsAccidents": {
+        "fields": [
+          {
+            "key": "notes",
+            "label": "Prior Claims or Accidents",
+            "type": "textarea"
+          }
+        ]
+      },
+      "priorInsuranceInfo": {
+        "fields": [
+          {
+            "key": "priorInsuranceCarrierName",
+            "label": "Prior Insurance Carrier Name",
+            "type": "text"
+          },
+          { "key": "startDate", "label": "Start Date", "type": "date" },
+          { "key": "endDate", "label": "End Date", "type": "date" }
+        ]
+      },
+      "additionalRiders": {
+        "repeatable": true,
+        "fields": [
+          { "key": "name", "label": "Name", "type": "text" },
+          { "key": "licenseNumber", "label": "License Number", "type": "text" },
+          { "key": "dateOfBirth", "label": "Date of Birth", "type": "date" },
+          { "key": "relation", "label": "Relation", "type": "select" }
+        ]
+      }
+    }
+  },
+  {
+    "insuranceType": "Boat / Watercraft Insurance",
+    "schema": {
+      "insured": {
+        "fields": [
+          { "key": "firstName", "label": "First Name", "type": "text" },
+          { "key": "middleName", "label": "Middle Name", "type": "text" },
+          { "key": "lastName", "label": "Last Name", "type": "text" },
+          { "key": "dateOfBirth", "label": "Date of Birth", "type": "date" }
+        ]
+      },
+      "watercraftDetails": {
+        "fields": [
+          { "key": "boatType", "label": "Boat Type", "type": "select" },
+          { "key": "year", "label": "Year", "type": "select" },
+          { "key": "make", "label": "Make", "type": "text" },
+          { "key": "model", "label": "Model", "type": "text" },
+          { "key": "hullNumber", "label": "Hull Number", "type": "text" },
+          { "key": "hullMaterial", "label": "Hull Material", "type": "text" },
+          { "key": "engineType", "label": "Engine Type", "type": "select" },
+          { "key": "engineNumbers", "label": "Engine Numbers", "type": "text" },
+          { "key": "horsepower", "label": "Horsepower", "type": "number" },
+          { "key": "trailerInfo", "label": "Trailer Info", "type": "textarea" },
+          { "key": "trailerValue", "label": "Trailer Value", "type": "number" },
+          { "key": "usage", "label": "Usage", "type": "select" },
+          { "key": "primaryUse", "label": "Primary Use", "type": "select" }
+        ]
+      },
+      "storage": {
+        "fields": [
+          {
+            "key": "storageMooringLocation",
+            "label": "Storage/Mooring Location",
+            "type": "textarea"
+          },
+          {
+            "key": "storedInWater",
+            "label": "Stored in Water?",
+            "type": "radio"
+          }
+        ]
+      },
+      "safety": {
+        "fields": [
+          {
+            "key": "safetyEquipmentOnboard",
+            "label": "Safety Equipment Onboard",
+            "type": "textarea"
+          }
+        ]
+      },
+      "priorClaims": {
+        "fields": [
+          {
+            "key": "claimsDetails",
+            "label": "Prior Claims",
+            "type": "textarea"
+          }
+        ]
+      },
+      "currentCarrier": {
+        "fields": [
+          {
+            "key": "carrierInfo",
+            "label": "Current Carrier Info",
+            "type": "textarea"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "insuranceType": "Renters Insurance",
+    "schema": {
+      "insured": {
+        "fields": [
+          { "key": "firstName", "label": "First Name", "type": "text" },
+          { "key": "middleName", "label": "Middle Name", "type": "text" },
+          { "key": "lastName", "label": "Last Name", "type": "text" },
+          { "key": "dateOfBirth", "label": "Date of Birth", "type": "date" }
+        ]
+      },
+      "rentalPropertyAddress": {
+        "fields": [
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" }
+        ]
+      },
+      "mailingAddress": {
+        "fields": [
+          {
+            "key": "autoFillFromProperty",
+            "label": "Auto Fill",
+            "type": "checkbox"
+          },
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" }
+        ]
+      },
+      "residence": {
+        "fields": [
+          {
+            "key": "residenceType",
+            "label": "Residence Type",
+            "type": "select"
+          }
+        ]
+      },
+      "landlordContact": {
+        "fields": [
+          { "key": "name", "label": "Name", "type": "text" },
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" },
+          { "key": "phoneNumber", "label": "Phone Number", "type": "text" },
+          { "key": "email", "label": "Email", "type": "text" }
+        ]
+      },
+      "household": {
+        "fields": [
+          {
+            "key": "numberOfResidents",
+            "label": "Number of Residents",
+            "type": "number"
+          }
+        ]
+      },
+      "coverageNeeds": {
+        "fields": [
+          {
+            "key": "personalPropertyValueEstimate",
+            "label": "Personal Property Value Estimate",
+            "type": "number"
+          },
+          {
+            "key": "desiredLiabilityCoverage",
+            "label": "Desired Liability Coverage",
+            "type": "number"
+          }
+        ]
+      },
+      "pets": {
+        "fields": [
+          { "key": "hasPets", "label": "Pets?", "type": "radio" },
+          { "key": "petTypeBreed", "label": "Type or Breed", "type": "text" }
+        ]
+      },
+      "priorClaimsHistory": {
+        "fields": [
+          {
+            "key": "notes",
+            "label": "Prior Claims History",
+            "type": "textarea"
+          }
+        ]
+      },
+      "currentRentersPolicy": {
+        "fields": [
+          { "key": "carrier", "label": "Carrier", "type": "text" },
+          { "key": "expiration", "label": "Expiration", "type": "date" }
+        ]
+      },
+      "security": {
+        "fields": [
+          {
+            "key": "fireSecuritySystemsPresent",
+            "label": "Fire/Security Systems Present?",
+            "type": "radio"
+          },
+          {
+            "key": "gatedCommunity",
+            "label": "Gated Community?",
+            "type": "radio"
+          },
+          { "key": "guardBooth", "label": "Guard Booth?", "type": "radio" }
+        ]
+      }
+    }
+  },
+  {
+    "insuranceType": "Flood Insurance",
+    "schema": {
+      "insured": {
+        "fields": [
+          { "key": "firstName", "label": "First Name", "type": "text" },
+          { "key": "middleName", "label": "Middle Name", "type": "text" },
+          { "key": "lastName", "label": "Last Name", "type": "text" },
+          { "key": "dateOfBirth", "label": "Date of Birth", "type": "date" }
+        ]
+      },
+      "propertyAddress": {
+        "fields": [
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" }
+        ]
+      },
+      "mailingAddress": {
+        "fields": [
+          {
+            "key": "autoFillFromProperty",
+            "label": "Auto Fill",
+            "type": "checkbox"
+          },
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" }
+        ]
+      },
+      "propertyDetails": {
+        "fields": [
+          { "key": "propertyType", "label": "Property Type", "type": "select" },
+          { "key": "yearBuilt", "label": "Year Built", "type": "select" },
+          {
+            "key": "floorsInStructure",
+            "label": "Floors in Structure",
+            "type": "number"
+          },
+          {
+            "key": "totalSquareFootage",
+            "label": "Total Square Footage",
+            "type": "number"
+          },
+          {
+            "key": "foundationType",
+            "label": "Foundation Type",
+            "type": "select"
+          }
+        ]
+      },
+      "elevationCertificate": {
+        "fields": [
+          {
+            "key": "hasElevationCertificate",
+            "label": "Elevation Certificate",
+            "type": "radio"
+          },
+          {
+            "key": "uploadCertificate",
+            "label": "Upload Certificate",
+            "type": "text"
+          }
+        ]
+      },
+      "pets": {
+        "fields": [
+          { "key": "hasPets", "label": "Pets?", "type": "radio" },
+          { "key": "petTypeBreed", "label": "Type or Breed", "type": "text" }
+        ]
+      },
+      "priorFloodDamageClaims": {
+        "fields": [
+          {
+            "key": "notes",
+            "label": "Prior Flood Damage/Claims",
+            "type": "textarea"
+          }
+        ]
+      },
+      "mortgageLender": {
+        "fields": [
+          { "key": "name", "label": "Name", "type": "text" },
+          { "key": "loanNumber", "label": "Loan Number", "type": "text" }
+        ]
+      },
+      "desiredCoverage": {
+        "fields": [
+          {
+            "key": "desiredCoverageAmount",
+            "label": "Desired Coverage",
+            "type": "number"
+          }
+        ]
+      },
+      "currentCarrier": {
+        "fields": [
+          {
+            "key": "currentCarrier",
+            "label": "Current Carrier",
+            "type": "text"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "insuranceType": "Group Benefits (Business Health)",
+    "schema": {
+      "businessInfo": {
+        "fields": [
+          { "key": "businessName", "label": "Business Name", "type": "text" }
+        ]
+      },
+      "businessAddress": {
+        "fields": [
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" }
+        ]
+      },
+      "tax": {
+        "fields": [{ "key": "ein", "label": "EIN", "type": "text" }]
+      },
+      "contact": {
+        "fields": [
+          { "key": "contactName", "label": "Contact Name", "type": "text" },
+          { "key": "title", "label": "Title", "type": "text" }
+        ]
+      },
+      "employees": {
+        "fields": [
+          { "key": "fullTime", "label": "Full Time", "type": "number" },
+          { "key": "partTime", "label": "Part Time", "type": "number" }
+        ]
+      },
+      "industry": {
+        "fields": [
+          {
+            "key": "industryNaicsCode",
+            "label": "Industry / NAICS Code",
+            "type": "text"
+          }
+        ]
+      },
+      "currentBenefits": {
+        "fields": [
+          {
+            "key": "currentBenefitsOffered",
+            "label": "Current Benefits Offered",
+            "type": "text"
+          }
+        ]
+      },
+      "additionalRiders": {
+        "fields": [
+          {
+            "key": "criticalIllnessRider",
+            "label": "Critical Illness Rider",
+            "type": "checkbox"
+          },
+          {
+            "key": "maternityRider",
+            "label": "Maternity Rider",
+            "type": "checkbox"
+          },
+          {
+            "key": "hospitalIndemnityRider",
+            "label": "Hospital Indemnity Rider",
+            "type": "checkbox"
+          },
+          {
+            "key": "prescriptionDrug",
+            "label": "Prescription Drug",
+            "type": "checkbox"
+          },
+          { "key": "dental", "label": "Dental", "type": "checkbox" },
+          { "key": "vision", "label": "Vision", "type": "checkbox" },
+          {
+            "key": "longTermCareRider",
+            "label": "Long-term Care Rider",
+            "type": "checkbox"
+          },
+          {
+            "key": "accidentalDeathAndDismemberment",
+            "label": "Accidental Death and Dismemberment",
+            "type": "checkbox"
+          },
+          {
+            "key": "waiverOfPremiumRider",
+            "label": "Waiver of Premium Rider",
+            "type": "checkbox"
+          },
+          {
+            "key": "guaranteedInsurabilityRider",
+            "label": "Guaranteed Insurability Rider",
+            "type": "checkbox"
+          },
+          {
+            "key": "roomRentRider",
+            "label": "Room Rent Rider",
+            "type": "checkbox"
+          },
+          {
+            "key": "hospitalDailyCashRider",
+            "label": "Hospital Daily Cash Rider",
+            "type": "checkbox"
+          },
+          {
+            "key": "opdRider",
+            "label": "OPD (Outpatient Department) Rider",
+            "type": "checkbox"
+          },
+          {
+            "key": "preExistingDiseaseRider",
+            "label": "Pre-Existing Disease Rider",
+            "type": "checkbox"
+          },
+          { "key": "otherRider", "label": "Other", "type": "checkbox" },
+          {
+            "key": "otherRiderText",
+            "label": "Other (describe)",
+            "type": "text"
+          }
+        ]
+      },
+      "contributionStructure": {
+        "fields": [
+          { "key": "employerPercent", "label": "Employer %", "type": "number" },
+          { "key": "employeePercent", "label": "Employee %", "type": "number" }
+        ]
+      },
+      "eligibility": {
+        "fields": [
+          {
+            "key": "waitingPeriodDays",
+            "label": "Waiting Period for Eligibility",
+            "type": "number"
+          }
+        ]
+      },
+      "currentCarrier": {
+        "fields": [
+          {
+            "key": "currentCarrier",
+            "label": "Current Carrier",
+            "type": "text"
+          },
+          { "key": "renewalDate", "label": "Renewal Date", "type": "date" }
+        ]
+      },
+      "censusUpload": {
+        "fields": [
+          { "key": "censusFile", "label": "Census Upload", "type": "text" }
+        ]
+      },
+      "claimsLossHistory": {
+        "fields": [
+          {
+            "key": "claimsNotes",
+            "label": "Claims/Loss History (optional)",
+            "type": "textarea"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "insuranceType": "Commercial Business Insurance",
+    "schema": {
+      "businessInfo": {
+        "fields": [
+          {
+            "key": "legalBusinessName",
+            "label": "Legal Business Name",
+            "type": "text"
+          },
+          {
+            "key": "lineOfBusiness",
+            "label": "Line of Business",
+            "type": "select"
+          },
+          { "key": "dba", "label": "DBA", "type": "text" },
+          { "key": "ein", "label": "EIN", "type": "text" }
+        ]
+      },
+      "businessAddress": {
+        "fields": [
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" }
+        ]
+      },
+      "mailingAddress": {
+        "fields": [
+          {
+            "key": "autoFillFromBusiness",
+            "label": "Auto Fill",
+            "type": "checkbox"
+          },
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" }
+        ]
+      },
+      "companyHistory": {
+        "fields": [
+          {
+            "key": "yearIncorporated",
+            "label": "Year Incorporated",
+            "type": "select"
+          },
+          {
+            "key": "yearsInBusiness",
+            "label": "Years in Business",
+            "type": "number"
+          }
+        ]
+      },
+      "industry": {
+        "fields": [
+          {
+            "key": "industryNaicsCode",
+            "label": "Industry / NAICS Code",
+            "type": "text"
+          }
+        ]
+      },
+      "employees": {
+        "fields": [
+          {
+            "key": "fullTimeEmployees",
+            "label": "Full Time",
+            "type": "number"
+          },
+          { "key": "partTimeEmployees", "label": "Part Time", "type": "number" }
+        ]
+      },
+      "financials": {
+        "fields": [
+          {
+            "key": "annualRevenue",
+            "label": "Annual Revenue",
+            "type": "number"
+          },
+          {
+            "key": "projectedSales",
+            "label": "Projected Sales",
+            "type": "number"
+          },
+          {
+            "key": "projectedPayroll",
+            "label": "Projected Payroll",
+            "type": "number"
+          },
+          { "key": "notes", "label": "Notes", "type": "textarea" }
+        ]
+      },
+      "coverageNeeded": {
+        "label": "Coverage Needed / Policy types",
+        "fields": [
+          {
+            "key": "generalLiability",
+            "label": "General Liability (GL)",
+            "type": "text"
+          },
+          {
+            "key": "businessOwnersPolicy",
+            "label": "Business Owner's Policy (BOP)",
+            "type": "text"
+          },
+          {
+            "key": "workersCompensation",
+            "label": "Workers' Compensation (WC)",
+            "type": "text"
+          },
+          {
+            "key": "propertyInsurance",
+            "label": "Property Insurance",
+            "type": "text"
+          },
+          {
+            "key": "commercialAutoFleet",
+            "label": "Commercial Auto / Fleet",
+            "type": "text"
+          },
+          {
+            "key": "cyberLiability",
+            "label": "Cyber Liability",
+            "type": "text"
+          },
+          {
+            "key": "professionalLiability",
+            "label": "Professional Liability (E&O)",
+            "type": "text"
+          },
+          {
+            "key": "umbrellaExcessLiability",
+            "label": "Umbrella / Excess Liability",
+            "type": "text"
+          }
+        ]
+      },
+      "commercialProperty": {
+        "label": "Commercial Building / Property Insurance",
+        "fields": [
+          { "key": "businessName", "label": "Business Name", "type": "text" },
+          { "key": "contactName", "label": "Contact Name", "type": "text" },
+          { "key": "phoneNumber", "label": "Phone Number", "type": "text" },
+          { "key": "emailAddress", "label": "Email Address", "type": "text" }
+        ],
+        "propertyAddress": {
+          "fields": [
+            {
+              "key": "streetAddress",
+              "label": "Street Address",
+              "type": "text"
+            },
+            { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+            { "key": "city", "label": "City", "type": "text" },
+            { "key": "state", "label": "State", "type": "select" },
+            { "key": "zipCode", "label": "Zip Code", "type": "text" }
+          ]
+        },
+        "mailingAddress": {
+          "fields": [
+            {
+              "key": "autoFillFromProperty",
+              "label": "Auto Fill",
+              "type": "checkbox"
+            },
+            {
+              "key": "streetAddress",
+              "label": "Street Address",
+              "type": "text"
+            },
+            { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+            { "key": "city", "label": "City", "type": "text" },
+            { "key": "state", "label": "State", "type": "select" },
+            { "key": "zipCode", "label": "Zip Code", "type": "text" }
+          ]
+        },
+        "buildingDetails": {
+          "fields": [
+            {
+              "key": "buildingOwnership",
+              "label": "Building Ownership",
+              "type": "select"
+            },
+            { "key": "yearBuilt", "label": "Year Built", "type": "select" },
+            {
+              "key": "totalSquareFootage",
+              "label": "Total Square Footage",
+              "type": "number"
+            },
+            {
+              "key": "numberOfFloors",
+              "label": "Number of Floors",
+              "type": "select"
+            },
+            {
+              "key": "constructionType",
+              "label": "Construction Type",
+              "type": "select"
+            },
+            {
+              "key": "foundationType",
+              "label": "Foundation Type",
+              "type": "select"
+            },
+            { "key": "roofType", "label": "Roof Type", "type": "select" },
+            { "key": "roofAge", "label": "Roof Age", "type": "number" },
+            {
+              "key": "sprinklerSystem",
+              "label": "Sprinkler System",
+              "type": "radio"
+            },
+            { "key": "fireAlarm", "label": "Fire Alarm", "type": "select" },
+            {
+              "key": "burglarAlarm",
+              "label": "Burglar Alarm",
+              "type": "select"
+            },
+            {
+              "key": "securityFeatures",
+              "label": "Security Features",
+              "type": "text"
+            },
+            { "key": "hvacSystem", "label": "HVAC System", "type": "select" },
+            { "key": "hvacAge", "label": "Age", "type": "number" },
+            {
+              "key": "electricalPlumbingUpdated",
+              "label": "Electrical/Plumbing Updated?",
+              "type": "radio"
+            },
+            {
+              "key": "electricalPlumbingUpdatedYear",
+              "label": "Year",
+              "type": "number"
+            },
+            {
+              "key": "buildingOccupancyType",
+              "label": "Building Occupancy Type",
+              "type": "select"
+            }
+          ]
+        },
+        "tenantsInBuilding": {
+          "fields": [
+            {
+              "key": "hasBusinessTenants",
+              "label": "Tenants in Building?",
+              "type": "radio"
+            }
+          ],
+          "tenants": {
+            "repeatable": true,
+            "fields": [
+              {
+                "key": "businessName",
+                "label": "Business Name",
+                "type": "text"
+              },
+              {
+                "key": "businessType",
+                "label": "Business Type",
+                "type": "select"
+              }
+            ]
+          }
+        },
+        "residentialTenants": {
+          "fields": [
+            {
+              "key": "hasResidentialTenants",
+              "label": "Residential Tenants?",
+              "type": "radio"
+            },
+            {
+              "key": "apartmentSize",
+              "label": "Apartment Size",
+              "type": "text"
+            },
+            {
+              "key": "bedroomCount",
+              "label": "Bedroom Count",
+              "type": "number"
+            },
+            {
+              "key": "bathroomCount",
+              "label": "Bathroom Count",
+              "type": "number"
+            },
+            {
+              "key": "monthlyRentalIncome",
+              "label": "Monthly Rental Income",
+              "type": "number"
+            }
+          ]
+        },
+        "currentCarrierInfo": {
+          "fields": [
+            { "key": "name", "label": "Name", "type": "text" },
+            { "key": "policyNumber", "label": "Policy #", "type": "text" },
+            { "key": "expiryDate", "label": "Expiry Date", "type": "date" }
+          ]
+        },
+        "priorClaimsLossHistory": {
+          "fields": [
+            {
+              "key": "notes",
+              "label": "Prior Claims or Loss History",
+              "type": "textarea"
+            }
+          ]
+        },
+        "coverages": {
+          "fields": [
+            { "key": "coverageNotes", "label": "Coverages", "type": "textarea" }
+          ]
+        },
+        "mortgageLender": {
+          "fields": [
+            { "key": "name", "label": "Name", "type": "text" },
+            {
+              "key": "streetAddress",
+              "label": "Street Address",
+              "type": "text"
+            },
+            { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+            { "key": "city", "label": "City", "type": "text" },
+            { "key": "state", "label": "State", "type": "select" },
+            { "key": "zipCode", "label": "Zip Code", "type": "text" },
+            { "key": "phoneNumber", "label": "Phone Number", "type": "text" },
+            { "key": "email", "label": "Email", "type": "text" },
+            { "key": "loanNumber", "label": "Loan Number", "type": "text" },
+            { "key": "note", "label": "Note", "type": "textarea" }
+          ]
+        },
+        "businessEquipmentInventory": {
+          "fields": [
+            {
+              "key": "upload",
+              "label": "Business Equipment Inventory",
+              "type": "text"
+            },
+            { "key": "note", "label": "Note", "type": "textarea" }
+          ]
+        },
+        "claimsHistoryLossRuns": {
+          "fields": [
+            { "key": "upload", "label": "Upload", "type": "text" },
+            { "key": "note", "label": "Note", "type": "textarea" }
+          ]
+        },
+        "priorCarrierDetails": {
+          "repeatable": true,
+          "fields": [
+            { "key": "carrierName", "label": "Carrier Name", "type": "text" },
+            { "key": "policyNumber", "label": "Policy Number", "type": "text" },
+            {
+              "key": "expirationDate",
+              "label": "Expiration Date",
+              "type": "date"
+            },
+            {
+              "key": "priorCoverages",
+              "label": "Prior Coverages",
+              "type": "text"
+            },
+            { "key": "lossRuns", "label": "Loss Runs", "type": "text" }
+          ]
+        },
+        "certificateHolders": {
+          "repeatable": true,
+          "fields": [
+            { "key": "fullName", "label": "Full Name", "type": "text" },
+            {
+              "key": "relationship",
+              "label": "Relationship",
+              "type": "select"
+            },
+            {
+              "key": "streetAddress",
+              "label": "Street Address",
+              "type": "text"
+            },
+            { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+            { "key": "city", "label": "City", "type": "text" },
+            { "key": "state", "label": "State", "type": "select" },
+            { "key": "zipCode", "label": "Zip Code", "type": "text" },
+            { "key": "phoneNumber", "label": "Phone Number", "type": "text" },
+            { "key": "email", "label": "Email", "type": "text" },
+            {
+              "key": "additionalInsured",
+              "label": "Additional Insured",
+              "type": "checkbox"
+            },
+            {
+              "key": "populateToAcord25",
+              "label": "Populate to ACORD 25",
+              "type": "checkbox"
+            }
+          ]
+        }
+      },
+      "workersComp": {
+        "label": "Workers' Compensation Subsection",
+        "fields": [
+          {
+            "key": "jobClassifications",
+            "label": "Job Classifications",
+            "type": "textarea"
+          },
+          {
+            "key": "annualPayrollByClass",
+            "label": "Annual Payroll by Class",
+            "type": "textarea"
+          },
+          { "key": "priorClaims", "label": "Prior Claims", "type": "radio" },
+          {
+            "key": "employeesOutOfState",
+            "label": "Employees Out of State?",
+            "type": "radio"
+          },
+          {
+            "key": "subcontractors",
+            "label": "Subcontractors?",
+            "type": "radio"
+          },
+          {
+            "key": "certificatesNeeded",
+            "label": "Certificates Needed?",
+            "type": "radio"
+          }
+        ],
+        "currentCarrierInfo": {
+          "fields": [
+            { "key": "carrierName", "label": "Carrier Name", "type": "text" },
+            { "key": "policyNumber", "label": "Policy Number", "type": "text" },
+            {
+              "key": "expirationDate",
+              "label": "Expiration Date",
+              "type": "date"
+            }
+          ]
+        }
+      },
+      "commercialAutoFleet": {
+        "fields": [
+          { "key": "contactName", "label": "Contact Name", "type": "text" },
+          {
+            "key": "fleetSize",
+            "label": "Fleet Size (# of Vehicles)",
+            "type": "number"
+          }
+        ],
+        "vehicles": {
+          "repeatable": true,
+          "fields": [
+            { "key": "vin", "label": "VIN", "type": "text" },
+            { "key": "year", "label": "Year", "type": "select" },
+            { "key": "make", "label": "Make", "type": "text" },
+            { "key": "model", "label": "Model", "type": "text" },
+            {
+              "key": "vehicleValue",
+              "label": "Vehicle Value",
+              "type": "number"
+            },
+            { "key": "bodyType", "label": "Body Type", "type": "select" },
+            { "key": "primaryUse", "label": "Primary Use", "type": "select" },
+            {
+              "key": "radiusOfOperation",
+              "label": "Radius of Operation",
+              "type": "select"
+            },
+            { "key": "personalUse", "label": "Personal Use?", "type": "radio" }
+          ]
+        },
+        "drivers": {
+          "repeatable": true,
+          "fields": [
+            { "key": "driverType", "label": "Driver Type", "type": "select" },
+            { "key": "fullName", "label": "Full Name", "type": "text" },
+            { "key": "dateOfBirth", "label": "Date of Birth", "type": "date" },
+            { "key": "licenseNumber", "label": "License #", "type": "text" },
+            { "key": "state", "label": "State", "type": "select" },
+            {
+              "key": "licenseClass",
+              "label": "License Class",
+              "type": "select"
+            },
+            {
+              "key": "defensiveDrivingCertificate",
+              "label": "Defensive Driving Certificate",
+              "type": "radio"
+            }
+          ]
+        },
+        "garagingLocations": {
+          "repeatable": true,
+          "fields": [
+            { "key": "driverType", "label": "Driver Type", "type": "select" },
+            { "key": "locationNotes", "label": "Notes", "type": "textarea" }
+          ]
+        },
+        "claimsHistory": {
+          "fields": [
+            {
+              "key": "lossClaimsHistory",
+              "label": "Loss/Claims History",
+              "type": "select"
+            }
+          ]
+        },
+        "desiredCoverages": {
+          "fields": [
+            {
+              "key": "desiredCoverages",
+              "label": "Desired Coverages",
+              "type": "select"
+            },
+            {
+              "key": "hiredNonOwnedExposure",
+              "label": "Hired/Non-Owned Auto Exposure?",
+              "type": "radio"
+            }
+          ]
+        },
+        "priorCarrierInfo": {
+          "fields": [
+            { "key": "carrierName", "label": "Carrier Name", "type": "text" },
+            { "key": "policyNumber", "label": "Policy Number", "type": "text" },
+            {
+              "key": "expirationDate",
+              "label": "Expiration Date",
+              "type": "date"
+            }
+          ]
+        },
+        "businessAutoSummary": {
+          "fields": [
+            {
+              "key": "existingPrimaryPolicies",
+              "label": "Existing primary insurance policies",
+              "type": "textarea"
+            },
+            {
+              "key": "businessOperationDescription",
+              "label": "Business Operation Description",
+              "type": "textarea"
+            },
+            {
+              "key": "timeInBusiness",
+              "label": "Length/ time in business",
+              "type": "text"
+            },
+            {
+              "key": "businessRevenue",
+              "label": "Business revenue",
+              "type": "number"
+            },
+            {
+              "key": "projectedSales",
+              "label": "Projected sales",
+              "type": "number"
+            },
+            {
+              "key": "employeeCount",
+              "label": "Employee count",
+              "type": "number"
+            },
+            {
+              "key": "projectedPayroll",
+              "label": "Projected payroll",
+              "type": "number"
+            },
+            {
+              "key": "coverageRequested",
+              "label": "Coverage Requested",
+              "type": "textarea"
+            },
+            {
+              "key": "claimHistoryLossRuns",
+              "label": "Claim history/ loss runs",
+              "type": "textarea"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "insuranceType": "Dwelling Fire / Landlord Policy",
+    "schema": {
+      "insured": {
+        "fields": [{ "key": "fullName", "label": "Full Name", "type": "text" }]
+      },
+      "mailingAddress": {
+        "fields": [
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" }
+        ]
+      },
+      "propertyAddress": {
+        "fields": [
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" }
+        ]
+      },
+      "propertyDetails": {
+        "fields": [
+          { "key": "propertyType", "label": "Property Type", "type": "select" },
+          {
+            "key": "occupancyType",
+            "label": "Occupancy Type",
+            "type": "select"
+          },
+          { "key": "yearBuilt", "label": "Year Built", "type": "select" },
+          {
+            "key": "squareFootage",
+            "label": "Square Footage",
+            "type": "number"
+          },
+          {
+            "key": "numberOfStories",
+            "label": "Number of Stories",
+            "type": "number"
+          },
+          {
+            "key": "numberOfUnits",
+            "label": "Number of Units",
+            "type": "number"
+          },
+          {
+            "key": "numberOfKitchens",
+            "label": "Number of Kitchens",
+            "type": "number"
+          },
+          {
+            "key": "numberOfBathrooms",
+            "label": "Number of Bathrooms",
+            "type": "number"
+          },
+          {
+            "key": "foundationType",
+            "label": "Foundation Type",
+            "type": "select"
+          },
+          { "key": "roofType", "label": "Roof Type", "type": "select" },
+          { "key": "heatingType", "label": "Heating Type", "type": "select" }
+        ]
+      },
+      "systemUpdates": {
+        "fields": [
+          {
+            "key": "electricalUpdated",
+            "label": "Electrical System Updated?",
+            "type": "radio"
+          },
+          {
+            "key": "plumbingUpdated",
+            "label": "Plumbing Updated?",
+            "type": "radio"
+          },
+          { "key": "hvacUpdated", "label": "HVAC Updated?", "type": "radio" },
+          {
+            "key": "electricalLastRenovation",
+            "label": "Last Renovation (Electrical)",
+            "type": "select"
+          },
+          {
+            "key": "plumbingLastRenovation",
+            "label": "Last Renovation (Plumbing)",
+            "type": "select"
+          },
+          {
+            "key": "hvacLastRenovation",
+            "label": "Last Renovation (HVAC)",
+            "type": "select"
+          }
+        ]
+      },
+      "exteriorSafety": {
+        "fields": [
+          { "key": "fireplaces", "label": "Fireplaces?", "type": "radio" },
+          { "key": "pool", "label": "Pool?", "type": "radio" },
+          { "key": "trampoline", "label": "Trampoline?", "type": "radio" },
+          {
+            "key": "petsOnPremises",
+            "label": "Pets on Premises?",
+            "type": "radio"
+          },
+          { "key": "petBreed", "label": "Breed", "type": "text" },
+          {
+            "key": "securitySystem",
+            "label": "Security System?",
+            "type": "radio"
+          },
+          {
+            "key": "propertyInFloodZone",
+            "label": "Property in Flood Zone?",
+            "type": "radio"
+          }
+        ]
+      },
+      "priorClaimsHistory": {
+        "fields": [
+          {
+            "key": "priorClaimsNotes",
+            "label": "Prior Claims History",
+            "type": "textarea"
+          }
+        ]
+      },
+      "currentCarrier": {
+        "fields": [
+          { "key": "carrierName", "label": "Carrier Name", "type": "text" },
+          {
+            "key": "expirationDate",
+            "label": "Expiration Date",
+            "type": "date"
+          }
+        ]
+      },
+      "desiredCoverage": {
+        "fields": [
+          {
+            "key": "desiredCoverage",
+            "label": "Desired Coverage",
+            "type": "textarea"
+          }
+        ]
+      },
+      "mortgageeInfo": {
+        "fields": [
+          { "key": "name", "label": "Name", "type": "text" },
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" },
+          { "key": "phoneNumber", "label": "Phone Number", "type": "text" },
+          { "key": "email", "label": "Email", "type": "text" },
+          { "key": "loanNumber", "label": "Loan Number", "type": "text" }
+        ]
+      },
+      "additionalNotes": {
+        "fields": [{ "key": "notes", "label": "Notes", "type": "textarea" }]
+      }
+    }
+  },
+  {
+    "insuranceType": "Pet Insurance",
+    "schema": {
+      "owner": {
+        "fields": [
+          {
+            "key": "petOwnerFullName",
+            "label": "Pet Owner Full Name",
+            "type": "text"
+          }
+        ]
+      },
+      "contact": {
+        "fields": [
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" },
+          { "key": "email", "label": "Email", "type": "text" },
+          { "key": "phoneNumber", "label": "Phone Number", "type": "text" }
+        ]
+      },
+      "pets": {
+        "repeatable": true,
+        "fields": [
+          { "key": "petName", "label": "Pet Name", "type": "text" },
+          { "key": "species", "label": "Species", "type": "select" },
+          { "key": "breed", "label": "Breed", "type": "text" },
+          { "key": "gender", "label": "Gender", "type": "select" },
+          { "key": "age", "label": "Age", "type": "number" },
+          { "key": "weight", "label": "Weight", "type": "number" },
+          {
+            "key": "spayedNeutered",
+            "label": "Is your pet spayed/neutered?",
+            "type": "radio"
+          },
+          {
+            "key": "preExistingConditions",
+            "label": "Any pre-existing conditions?",
+            "type": "radio"
+          },
+          { "key": "microchipped", "label": "Microchipped?", "type": "radio" },
+          {
+            "key": "vaccinationHistory",
+            "label": "Vaccination History",
+            "type": "textarea"
+          }
+        ]
+      },
+      "veterinarian": {
+        "label": "Current Veterinarian",
+        "fields": [
+          { "key": "name", "label": "Name", "type": "text" },
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" },
+          { "key": "email", "label": "Email", "type": "text" },
+          { "key": "phoneNumber", "label": "Phone Number", "type": "text" }
+        ]
+      },
+      "coverage": {
+        "fields": [
+          {
+            "key": "typeOfCoverageDesired",
+            "label": "Type of Coverage Desired",
+            "type": "select"
+          }
+        ]
+      },
+      "priorInsurance": {
+        "label": "Prior Pet Insurance?",
+        "fields": [
+          { "key": "carrierName", "label": "Carrier Name", "type": "text" },
+          {
+            "key": "expirationDate",
+            "label": "Expiration Date",
+            "type": "date"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "insuranceType": "Dental Insurance",
+    "schema": {
+      "insured": {
+        "fields": [
+          { "key": "fullName", "label": "Full Name", "type": "text" },
+          { "key": "dateOfBirth", "label": "Date of Birth", "type": "date" }
+        ]
+      },
+      "contact": {
+        "fields": [
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" },
+          { "key": "email", "label": "Email", "type": "text" },
+          { "key": "phoneNumber", "label": "Phone Number", "type": "text" }
+        ]
+      },
+      "demographics": {
+        "fields": [
+          { "key": "gender", "label": "Gender", "type": "select" },
+          { "key": "tobaccoUse", "label": "Tobacco Use", "type": "radio" }
+        ]
+      },
+      "currentInsurance": {
+        "label": "Current Dental Insurance?",
+        "fields": [
+          {
+            "key": "hasCurrentInsurance",
+            "label": "Current Dental Insurance?",
+            "type": "radio"
+          },
+          { "key": "carrier", "label": "Carrier", "type": "text" },
+          {
+            "key": "expirationDate",
+            "label": "Expiration Date",
+            "type": "date"
+          }
+        ]
+      },
+      "coverage": {
+        "fields": [
+          {
+            "key": "typeOfCoverageDesired",
+            "label": "Type of Coverage Desired",
+            "type": "select"
+          }
+        ]
+      },
+      "dependents": {
+        "fields": [
+          {
+            "key": "dependentCount",
+            "label": "Number of Dependents to Cover",
+            "type": "number"
+          }
+        ],
+        "details": {
+          "repeatable": true,
+          "fields": [
+            { "key": "name", "label": "Name", "type": "text" },
+            { "key": "dateOfBirth", "label": "Date of Birth", "type": "date" },
+            { "key": "relation", "label": "Relation", "type": "select" }
+          ]
+        }
+      },
+      "employment": {
+        "fields": [
+          {
+            "key": "employerSponsoredPlan",
+            "label": "Employer-Sponsored Plan?",
+            "type": "radio"
+          },
+          {
+            "key": "annualIncomeEstimate",
+            "label": "Annual Income Estimate",
+            "type": "number"
+          }
+        ]
+      },
+      "medicalHistory": {
+        "fields": [
+          {
+            "key": "preExistingConditionsDentalIssues",
+            "label": "Pre-existing Conditions or Dental Issues",
+            "type": "textarea"
+          }
+        ]
+      },
+      "preferences": {
+        "fields": [
+          {
+            "key": "preferredDentistOrNetwork",
+            "label": "Preferred Dentist or Network",
+            "type": "text"
+          }
+        ]
+      },
+      "priorClaimsHistory": {
+        "fields": [
+          {
+            "key": "notes",
+            "label": "Prior Claims History",
+            "type": "textarea"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "insuranceType": "Event Insurance",
+    "schema": {
+      "organizer": {
+        "fields": [
+          {
+            "key": "eventOrganizerName",
+            "label": "Event Organizer Name",
+            "type": "text"
+          }
+        ]
+      },
+      "contact": {
+        "fields": [
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" },
+          { "key": "email", "label": "Email", "type": "text" },
+          { "key": "phoneNumber", "label": "Phone Number", "type": "text" }
+        ]
+      },
+      "eventDetails": {
+        "fields": [
+          { "key": "eventName", "label": "Event Name", "type": "text" },
+          { "key": "eventType", "label": "Event Type", "type": "select" },
+          { "key": "eventDate", "label": "Event Date", "type": "date" }
+        ]
+      },
+      "eventLocation": {
+        "fields": [
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" }
+        ]
+      },
+      "attendanceTiming": {
+        "fields": [
+          {
+            "key": "expectedAttendance",
+            "label": "Expected Attendance",
+            "type": "number"
+          },
+          {
+            "key": "eventDuration",
+            "label": "Event Duration",
+            "type": "number"
+          },
+          { "key": "eventDurationUnit", "label": "Hours", "type": "select" }
+        ]
+      },
+      "coverage": {
+        "fields": [
+          {
+            "key": "coverageNeeded",
+            "label": "Coverage Needed",
+            "type": "select"
+          },
+          {
+            "key": "alcoholServed",
+            "label": "Alcohol Served?",
+            "type": "radio"
+          }
+        ]
+      },
+      "riskControls": {
+        "fields": [
+          {
+            "key": "hasSecurityArrangements",
+            "label": "Security Arrangements",
+            "type": "radio"
+          },
+          { "key": "securityArrangements", "label": "", "type": "textarea" },
+          {
+            "key": "hasVendorsContractors",
+            "label": "Vendors / Contractors Involved",
+            "type": "radio"
+          },
+          {
+            "key": "vendorsContractorsDetails",
+            "label": "",
+            "type": "textarea"
+          }
+        ]
+      },
+      "claimsHistory": {
+        "fields": [
+          {
+            "key": "hasPriorClaimsLossHistory",
+            "label": "Prior Claims or Loss History",
+            "type": "radio"
+          },
+          { "key": "priorClaimsLossHistory", "label": "", "type": "textarea" }
+        ]
+      },
+      "desiredCoverageLimits": {
+        "fields": [
+          {
+            "key": "desiredCoverageLimits",
+            "label": "Desired Coverage Limits",
+            "type": "textarea"
+          }
+        ]
+      },
+      "permitsLicenses": {
+        "fields": [
+          {
+            "key": "specialPermitsOrLicensesRequired",
+            "label": "Special Permits or Licenses Required?",
+            "type": "radio"
+          }
+        ]
+      },
+      "additionalNotes": {
+        "fields": [{ "key": "notes", "label": "Notes", "type": "textarea" }]
+      }
+    }
+  },
+  {
+    "insuranceType": "Disability Insurance",
+    "schema": {
+      "applicant": {
+        "fields": [
+          {
+            "key": "applicantFullName",
+            "label": "Applicant Full Name",
+            "type": "text"
+          },
+          { "key": "dateOfBirth", "label": "Date of Birth", "type": "date" }
+        ]
+      },
+      "contact": {
+        "fields": [
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" },
+          { "key": "email", "label": "Email", "type": "text" },
+          { "key": "phoneNumber", "label": "Phone Number", "type": "text" }
+        ]
+      },
+      "demographics": {
+        "fields": [{ "key": "gender", "label": "Gender", "type": "select" }]
+      },
+      "employment": {
+        "fields": [
+          { "key": "occupation", "label": "Occupation", "type": "select" },
+          { "key": "employerName", "label": "Employer Name", "type": "text" },
+          { "key": "annualIncome", "label": "Annual Income", "type": "number" },
+          {
+            "key": "employmentStatus",
+            "label": "Employment Status",
+            "type": "select"
+          }
+        ]
+      },
+      "coverage": {
+        "fields": [
+          {
+            "key": "typeOfCoverageDesired",
+            "label": "Type of Disability Coverage Desired",
+            "type": "select"
+          },
+          {
+            "key": "waitingPeriodDesired",
+            "label": "Waiting Period Desired",
+            "type": "select"
+          },
+          {
+            "key": "benefitPeriodDesired",
+            "label": "Benefit Period Desired",
+            "type": "select"
+          },
+          {
+            "key": "hasExistingDisabilityInsurance",
+            "label": "Existing Disability Insurance?",
+            "type": "radio"
+          }
+        ]
+      },
+      "claimsHistory": {
+        "fields": [
+          {
+            "key": "priorDisabilityClaims",
+            "label": "Prior Disability Claims",
+            "type": "radio"
+          },
+          {
+            "key": "priorDisabilityClaimsDetails",
+            "label": "",
+            "type": "textarea"
+          }
+        ]
+      },
+      "health": {
+        "fields": [
+          {
+            "key": "hasHealthConditionsOrMedications",
+            "label": "Health Conditions or Medications",
+            "type": "radio"
+          },
+          {
+            "key": "healthConditionsOrMedicationsDetails",
+            "label": "",
+            "type": "textarea"
+          }
+        ]
+      },
+      "lifestyle": {
+        "fields": [
+          { "key": "tobaccoUse", "label": "Tobacco Use", "type": "radio" },
+          { "key": "alcoholUse", "label": "Alcohol Use", "type": "radio" }
+        ]
+      },
+      "familyMedicalHistory": {
+        "fields": [
+          {
+            "key": "familyMedicalHistory",
+            "label": "Family Medical History",
+            "type": "textarea"
+          }
+        ]
+      },
+      "additionalNotes": {
+        "fields": [
+          { "key": "notes", "label": "Additional Notes", "type": "textarea" }
+        ]
+      }
+    }
+  },
+  {
+    "insuranceType": "Long-Term Care Insurance",
+    "schema": {
+      "applicant": {
+        "fields": [
+          {
+            "key": "applicantFullName",
+            "label": "Applicant Full Name",
+            "type": "text"
+          },
+          { "key": "dateOfBirth", "label": "Date of Birth", "type": "date" }
+        ]
+      },
+      "contact": {
+        "fields": [
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" },
+          { "key": "email", "label": "Email", "type": "text" },
+          { "key": "phoneNumber", "label": "Phone Number", "type": "text" }
+        ]
+      },
+      "demographics": {
+        "fields": [
+          { "key": "gender", "label": "Gender", "type": "select" },
+          {
+            "key": "maritalStatus",
+            "label": "Marital Status",
+            "type": "select"
+          }
+        ]
+      },
+      "livingHealth": {
+        "fields": [
+          {
+            "key": "currentLivingSituation",
+            "label": "Current Living Situation",
+            "type": "text"
+          },
+          {
+            "key": "currentHealthStatus",
+            "label": "Current Health Status",
+            "type": "select"
+          }
+        ]
+      },
+      "healthConditions": {
+        "fields": [
+          {
+            "key": "hasPreExistingConditions",
+            "label": "Pre-existing Conditions",
+            "type": "checkbox"
+          },
+          {
+            "key": "preExistingConditionsDetails",
+            "label": "",
+            "type": "textarea"
+          },
+          {
+            "key": "adlsAssistanceNeeded",
+            "label": "Activities of Daily Living (ADLs) Assistance Needed",
+            "type": "textarea"
+          },
+          {
+            "key": "cognitiveImpairment",
+            "label": "Cognitive Impairment",
+            "type": "radio"
+          }
+        ]
+      },
+      "employment": {
+        "fields": [
+          { "key": "occupation", "label": "Occupation", "type": "select" },
+          { "key": "employerName", "label": "Employer Name", "type": "text" }
+        ]
+      },
+      "coverage": {
+        "fields": [
+          {
+            "key": "desiredCoverageType",
+            "label": "Desired Coverage Type",
+            "type": "select"
+          },
+          {
+            "key": "benefitAmountDesired",
+            "label": "Benefit Amount Desired",
+            "type": "number"
+          },
+          {
+            "key": "benefitPeriodDesired",
+            "label": "Benefit Period Desired",
+            "type": "select"
+          },
+          {
+            "key": "eliminationPeriodDays",
+            "label": "Elimination Period (Days)",
+            "type": "number"
+          }
+        ]
+      },
+      "existingInsurance": {
+        "fields": [
+          {
+            "key": "hasExistingLongTermCareInsurance",
+            "label": "Existing Long-Term Care Insurance?",
+            "type": "radio"
+          }
+        ]
+      },
+      "claimsHistory": {
+        "fields": [
+          {
+            "key": "priorClaimsHistory",
+            "label": "Prior Claims History",
+            "type": "textarea"
+          }
+        ]
+      },
+      "familyMedicalHistory": {
+        "fields": [
+          {
+            "key": "familyHistoryDementiaAlzheimers",
+            "label": "Family History of Dementia or Alzheimer's",
+            "type": "textarea"
+          }
+        ]
+      },
+      "additionalNotes": {
+        "fields": [
+          { "key": "notes", "label": "Additional Notes", "type": "textarea" }
+        ]
+      }
+    }
+  },
+  {
+    "insuranceType": "Other Policy",
+    "schema": {
+      "basicInformation": {
+        "fields": [
+          {
+            "key": "businessName",
+            "label": "Business name (If owned by business/company)",
+            "type": "text"
+          },
+          {
+            "key": "policyholderFullName",
+            "label": "Policyholder Full Name",
+            "type": "text"
+          },
+          { "key": "dateOfBirth", "label": "Date of Birth", "type": "date" }
+        ]
+      },
+      "physicalAddress": {
+        "fields": [
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" },
+          { "key": "email", "label": "Email", "type": "text" },
+          { "key": "phoneNumber", "label": "Phone Number", "type": "text" }
+        ]
+      },
+      "mailingAddress": {
+        "fields": [
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" },
+          { "key": "email", "label": "Email", "type": "text" },
+          { "key": "phoneNumber", "label": "Phone Number", "type": "text" }
+        ]
+      },
+      "policyDetails": {
+        "fields": [
+          {
+            "key": "insuranceTypeDescription",
+            "label": "Name of Insurance Type or Description",
+            "type": "text"
+          },
+          {
+            "key": "insuranceForBusiness",
+            "label": "Business",
+            "type": "checkbox"
+          },
+          {
+            "key": "insuranceForPersonal",
+            "label": "Personal",
+            "type": "checkbox"
+          },
+          {
+            "key": "typeOfCoverageRequested",
+            "label": "Type of Coverage Requested",
+            "type": "select"
+          },
+          {
+            "key": "insuranceCompany",
+            "label": "Insurance Company",
+            "type": "text"
+          },
+          {
+            "key": "desiredEffectiveDate",
+            "label": "Desired Effective Date of Policy",
+            "type": "date"
+          },
+          {
+            "key": "hasPriorInsuranceCarrier",
+            "label": "Prior Insurance Carrier",
+            "type": "checkbox"
+          },
+          {
+            "key": "priorInsuranceCarrierDetails",
+            "label": "",
+            "type": "textarea"
+          },
+          {
+            "key": "hasPriorClaimsHistory",
+            "label": "Prior Claims History",
+            "type": "checkbox"
+          },
+          {
+            "key": "priorClaimsHistoryDetails",
+            "label": "",
+            "type": "textarea"
+          }
+        ]
+      },
+      "propertyOrAssetInformation": {
+        "fields": [
+          {
+            "key": "itemDescription",
+            "label": "Description of Item/Property to be Insured",
+            "type": "textarea"
+          },
+          {
+            "key": "itemLocation",
+            "label": "Location of Item/Property",
+            "type": "textarea"
+          },
+          {
+            "key": "estimatedValue",
+            "label": "Estimated Value of Item/Property",
+            "type": "number"
+          },
+          {
+            "key": "currentlyInsured",
+            "label": "Is this item currently insured under any other policy?",
+            "type": "radio"
+          }
+        ]
+      },
+      "additionalContactsOrInsuredParties": {
+        "repeatable": true,
+        "fields": [
+          { "key": "fullName", "label": "Full Name", "type": "text" },
+          { "key": "relationship", "label": "Relationship", "type": "select" },
+          { "key": "streetAddress", "label": "Street Address", "type": "text" },
+          { "key": "unitNumber", "label": "Unit Number", "type": "text" },
+          { "key": "city", "label": "City", "type": "text" },
+          { "key": "state", "label": "State", "type": "select" },
+          { "key": "zipCode", "label": "Zip Code", "type": "text" },
+          { "key": "phoneNumber", "label": "Phone Number", "type": "text" },
+          { "key": "emailAddress", "label": "Email Address", "type": "text" }
+        ]
+      },
+      "attachments": {
+        "fields": [
+          { "key": "attachments", "label": "Attachments", "type": "text" }
+        ]
+      },
+      "notes": {
+        "fields": [{ "key": "notes", "label": "Notes", "type": "textarea" }]
+      }
+    }
+  },
+  {
+    "insuranceType": "Other Policy Type",
+    "schema": {
+      "": {
+        "fields": [
+          {
+            "key": "otherPolicyType",
+            "label": "Type your policy details ",
+            "type": "textarea",
+            "placeholder": "Please specify the other policy type",
+            "rows": 5,
+            "fullWidth": true,
+            "className": "resize-y"
+          }
+        ]
+      }
+    }
+  }
+]
